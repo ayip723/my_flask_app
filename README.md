@@ -1,4 +1,6 @@
 # my_flask_app
+jquery.tablesorter.js and theme.default.css are from https://mottie.github.io/tablesorter/docs/index.html
+
 Required libraries:
 
 sudo pip install Flask PyGithub

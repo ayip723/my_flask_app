@@ -1,7 +1,9 @@
 $(function() {
   $('#submit').click(function (e) {
     e.preventDefault();
+
     var organization = $('#organization').val()
+
     $.ajax({
       url: '/get_top_repos',
       method: 'GET',
@@ -56,6 +58,7 @@ $(function() {
       }
     });
   });
+
   $('#reposTable').tablesorter({
     headers: {
       0: { sorter: false },
@@ -64,17 +67,20 @@ $(function() {
       3: { lockedOrder: 'desc' },
     }
   });
+
   $('#internalTable').tablesorter({
     headers: {
       0: { sorter: false },
       1: { sorter: false }
     }
   });
+
   $('#externalTable').tablesorter({
     headers: {
       0: { sorter: false },
       1: { sorter: false }
     }
   });
+
   $('#tabs').tabs();
 });
